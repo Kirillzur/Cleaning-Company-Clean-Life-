@@ -6,7 +6,7 @@ export default {
   ],
   theme: {
     screens: {
-      sm: "320px",
+      sm: "460px",
       md: "768px",
       lg: "1024px",
       xl: "1280px",
@@ -24,7 +24,7 @@ export default {
       },
       fontFamily: {
        primary: ["Inter", "system-ui", "sans-serif"],
-       secondary: ["Source Sans 3", "system-ui", "sans-serif"],
+       secondary: ["Noto Sans", "system-ui", "sans-serif"],
       },
       spacing: {
         18: "4.5rem",
