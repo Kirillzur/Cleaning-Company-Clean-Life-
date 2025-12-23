@@ -6,6 +6,8 @@ import heroPc from '../../Media/images/Hero-Section-1028px.webp';
 import heroContainer from '../../Media/images/Hero-Mobile-Container.webp';
 
 
+
+
 const Hero = () => {
   return (
     <>
@@ -16,8 +18,8 @@ const Hero = () => {
           <p className="mt-3.5 text-xl max-w-[485px]">Ammattitaitoinen ja ekologinen siivous, joka muuttaa kotisi rauhan tyyssijaksi. Tuomme kiillon takaisin kotiisi.</p>
           </div>
           <div className='hidden min-[1028px]:flex min-[1028px]:flex-row min-[1028px]:items-end min-[1028px]:gap-3'>
-            <CalculatePriceButton/>
-            <BookHeroButton/>
+            <CalculatePriceButton label="Laske hinta" />
+            <BookHeroButton label="Varaa siivous" />
           </div>
         </div>
         <div className='mt-4.5 min-[680px]:inline-grid min-[680px]:grid-cols-[max-content_max-content] min-[680px]:items-end min-[680px]:justify-start min-[680px]:gap-6 md:grid md:justify-center md:w-full min-[1028px]:block'>
@@ -37,8 +39,8 @@ const Hero = () => {
             </div>
           </div>
           <div className='mt-9 flex justify-center gap-4 min-[680px]:mt-0 min-[680px]:flex-col min-[680px]:items-end min-[680px]:gap-3 min-[680px]:self-end md:items-center md:self-auto min-[1028px]:hidden'>
-            <CalculatePriceButton/>
-            <BookHeroButton/>
+            <CalculatePriceButton label="Laske hinta" />
+            <BookHeroButton label="Varaa siivous" />
           </div>
         </div>
     </div>
