@@ -1,6 +1,6 @@
 
 
-type ServiceInfoContainerProps = {
+interface ServiceInfoContainerProps {
     title: string;
     description: string;
     className?: string;

@@ -48,7 +48,7 @@ const Navbar = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <NavButton />
+          <NavButton label="Ota Yhteyttä" />
           <button
             type="button"
             aria-label="Open sidebar menu"

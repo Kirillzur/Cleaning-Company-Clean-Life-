@@ -1,10 +1,9 @@
 import type { MouseEventHandler } from 'react'
+import type { ResponsiveImages } from '../../data/services'
 import ReadMoreButton from './ReadMoreButton'
 
-type ServiceCardProps = {
-  image: string
-  tabletImage?: string
-  pcImage?: string
+interface ServiceCardProps {
+  image: ResponsiveImages
   icon: string
   title: string
   buttonText: string
@@ -15,8 +14,6 @@ type ServiceCardProps = {
 
 const ServiceCard = ({
   image,
-  tabletImage,
-  pcImage,
   icon,
   title,
   buttonText,
@@ -27,9 +24,9 @@ const ServiceCard = ({
   return (
     <div className={`relative w-full max-w-[340px] ${className ?? ''}`.trim()}>
       <picture>
-        {pcImage ? <source media="(min-width: 1480px)" srcSet={pcImage} /> : null}
-        {tabletImage ? <source media="(min-width: 768px)" srcSet={tabletImage} /> : null}
-        <img className="w-full h-auto md:h-full md:object-cover" src={image} alt={title} />
+        <source media="(min-width: 1480px)" srcSet={image.desktop} />
+        <source media="(min-width: 768px)" srcSet={image.tablet} />
+        <img className="w-full h-auto md:h-full md:object-cover" src={image.mobile} alt={title} />
       </picture>
       <div className="absolute inset-0 flex flex-col items-center justify-end gap-3 pb-4">
         <div className="self-start ml-8">

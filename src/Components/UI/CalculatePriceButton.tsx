@@ -1,6 +1,6 @@
 
 
-type CalculatePriceButtonProps = {
+interface CalculatePriceButtonProps  {
   label: string
 } 
 

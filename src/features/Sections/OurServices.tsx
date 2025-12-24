@@ -1,47 +1,9 @@
-import kotisiivousImage from '../../Media/images/Kotisiivous-Container.png'
-import toimistoSiivousImage from '../../Media/images/Toimisto-Siivous-Container.png'
-import muuttoSiivousImage from '../../Media/images/Muutto-Siivous-Container.png'
-import kotisiivousTabletImage from '../../Media/images/KotiSiivousTablet.png'
-import toimistoSiivousTabletImage from '../../Media/images/ToimistoSiivousTablet.png'
-import muuttoSiivousTabletImage from '../../Media/images/MuuttoSiivousTablet.png'
-import kotisiivousPcImage from '../../Media/images/KotiSiivousPc.png'
-import toimistoSiivousPcImage from '../../Media/images/ToimistoSiivousPc.png'
-import muuttoSiivousPcImage from '../../Media/images/MuuttoSiivousPc.png'
-import kotisiivousIcon from '../../Media/Icons/KotiSiivous.svg'
-import toimistoSiivousIcon from '../../Media/Icons/ToimistoSiivous.svg'
-import muuttoSiivousIcon from '../../Media/Icons/MuuttoSiivous.svg'
+import OwnerComment from '../../Components/UI/OwnerComment'
 import ServiceCard from '../../Components/UI/ServiceCard'
 import ServiceInfoContainer from '../../Components/UI/ServiceInfoContainer'
+import { services } from '../../data/services'
 
-const services = [
-  {
-    id: 'kotisiivous',
-    image: kotisiivousImage,
-    tabletImage: kotisiivousTabletImage,
-    pcImage: kotisiivousPcImage,
-    icon: kotisiivousIcon,
-    title: 'Kotisiivous',
-    buttonText: 'Lue lisää',
-  },
-  {
-    id: 'toimisto-siivous',
-    image: toimistoSiivousImage,
-    tabletImage: toimistoSiivousTabletImage,
-    pcImage: toimistoSiivousPcImage,
-    icon: toimistoSiivousIcon,
-    title: 'ToimistoSiivous',
-    buttonText: 'Lue lisää',
-  },
-  {
-    id: 'muutto-siivous',
-    image: muuttoSiivousImage,
-    tabletImage: muuttoSiivousTabletImage,
-    pcImage: muuttoSiivousPcImage,
-    icon: muuttoSiivousIcon,
-    title: 'MuuttoSiivous',
-    buttonText: 'Lue lisää',
-  },
-]
+
 
 const OurServices = () => {
   return (
@@ -52,13 +14,11 @@ const OurServices = () => {
             <h2 className='text-primary font-bold text-4xl'>Palvelumme</h2>
         </div>
           <div className="mt-8 flex flex-col items-center xl:flex-row xl:items-start xl:justify-center">
-            <div className="grid grid-cols-1 gap-3 justify-items-center md:grid-cols-2 md:max-w-[704px] md:mr-12 2xl:mr-7 2xl:max-w-[950px] 2xl:gap-[13px]">
+            <div className="grid grid-cols-1 gap-3 justify-items-center md:grid-cols-2 md:max-w-[704px] xl:mr-12 2xl:mr-7 2xl:max-w-[950px] 2xl:gap-[13px]">
               {services.map((service, index) => (
                 <ServiceCard
                   key={service.id}
                   image={service.image}
-                  tabletImage={service.tabletImage}
-                  pcImage={service.pcImage}
                   icon={service.icon}
                   title={service.title}
                   buttonText={service.buttonText}
@@ -80,9 +40,11 @@ const OurServices = () => {
                   description='TyöKokemusta'
                   className="xl:w-[464px] xl:h-[220px]"
                 />
+                 <OwnerComment title={`"Tehtävämme on tarjota puhdas ja terveellinen ympäristö sinulle ja perheellesi."`} name="Jane Duo" description="Perustaja, CleanLife" />
               </div>
             </div>
           </div>
+
     </div>
     </>
   )

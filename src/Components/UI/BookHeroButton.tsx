@@ -1,6 +1,5 @@
 
-
-type BookHeroButtonProps = {
+interface BookHeroButtonProps {
   label: string;
 }
 
