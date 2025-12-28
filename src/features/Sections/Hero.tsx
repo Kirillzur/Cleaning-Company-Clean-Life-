@@ -3,7 +3,6 @@ import CalculatePriceButton from '../../Components/UI/CalculatePriceButton';
 import heroMobile from '../../Media/images/Hero-section-mobile.webp';
 import heroTablet from '../../Media/images/Hero-section-768px.webp';
 import heroPc from '../../Media/images/Hero-Section-1028px.webp';
-import heroContainer from '../../Media/images/Hero-Mobile-Container.webp';
 
 
 
@@ -30,12 +29,6 @@ const Hero = () => {
                 <source media="(min-width: 600px)" srcSet={heroTablet} />
                 <img className='rounded-[48px] w-full h-auto' src={heroMobile} alt="Hero Image" />
               </picture>
-              <img
-                className='absolute bottom-4 left-4 z-10 w-[140px] min-[600px]:w-40 min-[1028px]:w-[200px] h-auto pointer-events-none'
-                src={heroContainer}
-                alt=""
-                aria-hidden="true"
-              />
             </div>
           </div>
           <div className='mt-9 flex justify-center gap-4 min-[680px]:mt-0 min-[680px]:flex-col min-[680px]:items-end min-[680px]:gap-3 min-[680px]:self-end md:items-center md:self-auto min-[1028px]:hidden'>
