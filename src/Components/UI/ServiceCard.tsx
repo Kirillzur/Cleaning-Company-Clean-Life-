@@ -26,7 +26,7 @@ const ServiceCard = ({
       <picture>
         <source media="(min-width: 1480px)" srcSet={image.desktop} />
         <source media="(min-width: 768px)" srcSet={image.tablet} />
-        <img className="w-full h-auto md:h-full md:object-cover" src={image.mobile} alt={title} />
+        <img className="w-full h-auto min-[600px]:w-[330px] md:h-full md:w-full" src={image.mobile} alt={title} />
       </picture>
       <div className="absolute inset-0 flex flex-col items-center justify-end gap-3 pb-4">
         <div className="self-start ml-8">
