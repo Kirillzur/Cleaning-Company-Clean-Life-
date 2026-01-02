@@ -40,7 +40,7 @@ const OurServices = () => {
                   description='TyöKokemusta'
                   className="xl:w-[464px] xl:h-[220px]"
                 />
-                 <OwnerComment title={`"Tehtävämme on tarjota puhdas ja terveellinen ympäristö sinulle ja perheellesi."`} name="Jane Duo" description="Perustaja, CleanLife" />
+                 <OwnerComment title={`"Tehtävämme on tarjota puhdas ja terveellinen ympäristö sinulle ja perheellesi."`} name="Janne Hirvonen" description="Perustaja, CleanLife" />
               </div>
             </div>
           </div>
