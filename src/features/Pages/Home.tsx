@@ -1,3 +1,4 @@
+import Contact from '../Sections/Contact'
 import GoogleRev from '../Sections/GoogleRev'
 import Hero from '../Sections/Hero'
 import OurServices from '../Sections/OurServices'
@@ -11,6 +12,7 @@ const Home = () => {
       <OurServices />
       <Reels />
       <GoogleRev />
+      <Contact />
     </>
   )
 }

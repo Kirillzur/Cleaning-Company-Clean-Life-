@@ -116,7 +116,7 @@ const Footer = () => {
 
   return (
     <footer className="bg-primary text-white">
-      <div className="mx-auto  px-4 py-6 sm:px-6 md:px-8 md:py-10 lg:px-10 lg:py-12">
+      <div className="mx-auto max-w-[1480px]  px-4 py-6 sm:px-6 md:px-8 md:py-10 lg:px-10 lg:py-12">
         <div className="flex flex-col gap-4 md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
