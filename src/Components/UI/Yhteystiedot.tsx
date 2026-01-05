@@ -1,4 +1,5 @@
-import map from '../../Media/images/Map.webp'
+import { MarkerMap } from "./MarkerMap"
+
 
 const contactItems = [
   {
@@ -101,12 +102,8 @@ const Yhteystiedot = () => {
           ))}
         </div>
         <div className="mt-7">
-          <div className="relative h-40 w-full overflow-hidden rounded-2xl bg-[#0b6f62]">
-            <img
-              src={map}
-              alt="Map showing the location of CleanLife office"
-              className="absolute inset-0 h-full w-full object-cover"
-            />
+          <div className="relative h-40 w-full overflow-hidden rounded-2xl">
+            <MarkerMap />
           </div>
         </div>
       </div>
