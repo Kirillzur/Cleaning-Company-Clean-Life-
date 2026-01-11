@@ -12,7 +12,7 @@ import toimistoSiivousIcon from '../Media/Icons/ToimistoSiivous.svg'
 import muuttoSiivousIcon from '../Media/Icons/MuuttoSiivous.svg'
 
 
-export type ServiceId = "kotisiivous" | "toimisto-siivous" | "muutto-siivous";
+export type serviceId = "Kotisiivous" | "ToimistoSiivous" | "MuuttoSiivous";
 
 export interface ResponsiveImages {
   mobile: string;
@@ -21,7 +21,7 @@ export interface ResponsiveImages {
 }
 
 export interface Service {
-  id: ServiceId;
+  id: serviceId;
   image: ResponsiveImages;
   icon: string;
   title: string;
@@ -30,7 +30,7 @@ export interface Service {
 
 export const services: Service[] = [
   {
-    id: "kotisiivous",
+    id: "Kotisiivous",
     image: {
       mobile: kotisiivousImage,
       tablet: kotisiivousTabletImage,
@@ -41,7 +41,7 @@ export const services: Service[] = [
     buttonText: "Lue lisää",
   },
   {
-    id: "toimisto-siivous",
+    id: "ToimistoSiivous",
     image: {
       mobile: toimistoSiivousImage,
       tablet: toimistoSiivousTabletImage,
@@ -52,7 +52,7 @@ export const services: Service[] = [
     buttonText: "Lue lisää",
   },
   {
-    id: "muutto-siivous",
+    id: "MuuttoSiivous",
     image: {
       mobile: muuttoSiivousImage,
       tablet: muuttoSiivousTabletImage,

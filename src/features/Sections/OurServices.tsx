@@ -10,7 +10,7 @@ const OurServices = () => {
     <>
     <div className='mt-13 md:mt-33'>
         <div className='text-center'>
-            <h3 className='text-primary font-bold text-[14px] mb-1.5'>Mitä Teemme</h3>
+            <h3 className='text-primary font-bold uppercase text-[14px] tracking-widest mb-1.5'>Mitä Teemme</h3>
             <h2 className='text-primary font-bold text-4xl'>Palvelumme</h2>
         </div>
           <div className="mt-8 flex flex-col items-center xl:flex-row xl:items-start xl:justify-center">

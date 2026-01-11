@@ -1,9 +1,9 @@
-import Contact from '../Sections/Contact'
-import GoogleRev from '../Sections/GoogleRev'
-import Hero from '../Sections/Hero'
-import OurServices from '../Sections/OurServices'
-import Reels from '../Sections/Reels'
-
+import PriceCalculator from "@/features/Sections/PriceCalculator";
+import Hero from "../Sections/Hero";
+import OurServices from "../Sections/OurServices";
+import Reels from "../Sections/Reels";
+import GoogleRev from "../Sections/GoogleRev";
+import Contact from "../Sections/Contact";
 
 const Home = () => {
   return (
@@ -12,9 +12,10 @@ const Home = () => {
       <OurServices />
       <Reels />
       <GoogleRev />
+      <PriceCalculator />
       <Contact />
     </>
-  )
-}
+  );
+};
 
-export default Home
+export default Home;

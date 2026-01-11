@@ -64,7 +64,7 @@ const Reels = () => {
     <section className='mt-18 mb-18 md:mt-30 md:mb-30'>
       <div className='rounded-4xl  px-4 py-10 md:px-8 md:py-12'>
         <div className='text-center'>
-          <p className='text-primary font-bold text-[14px] mb-1.5 uppercase tracking-[0.2em]'>
+          <p className='text-primary font-bold text-[14px] mb-1.5 uppercase tracking-widest'>
             Työntekijöiden suosittelemat
           </p>
           <h2 className='text-primary font-bold text-4xl'>Siivousvinkit</h2>
