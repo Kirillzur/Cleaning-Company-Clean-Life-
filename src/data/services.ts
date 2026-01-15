@@ -26,6 +26,7 @@ export interface Service {
   icon: string;
   title: string;
   buttonText: string;
+  readMoreLabel?: string[];
 }
 
 export const services: Service[] = [
@@ -39,6 +40,13 @@ export const services: Service[] = [
     icon: kotisiivousIcon,
     title: "Kotisiivous",
     buttonText: "Lue lisää",
+    readMoreLabel: [
+      "Pölyjen pyyhintä pinnoilta",
+      "Lattioiden imurointi ja pesu",
+      "Keittiön tasojen, altaan ja kodinkoneiden ulkopintojen puhdistus",
+      "WC- ja kylpyhuonetilojen siivous",
+      "Roskien vienti"
+    ]
   },
   {
     id: "ToimistoSiivous",
@@ -50,6 +58,13 @@ export const services: Service[] = [
     icon: toimistoSiivousIcon,
     title: "ToimistoSiivous",
     buttonText: "Lue lisää",
+    readMoreLabel: [
+      "Työpisteiden ja yhteisten pintojen puhdistus",
+      "Lattioiden imurointi ja pesu",
+      "Keittiö- ja taukotilojen siivous",
+      "WC-tilojen puhdistus",
+      "Roskien tyhjennys"
+    ]
   },
   {
     id: "MuuttoSiivous",
@@ -61,5 +76,12 @@ export const services: Service[] = [
     icon: muuttoSiivousIcon,
     title: "MuuttoSiivous",
     buttonText: "Lue lisää",
+    readMoreLabel: [
+      "Kaikkien pintojen perusteellinen puhdistus",
+      "Keittiön kaapit, kodinkoneet ja liesituuletin",
+      "Kylpyhuoneen ja WC:n tehopuhdistus",
+      "Lattioiden pesu ja listojen pyyhintä",
+      "Ikkunoiden pesu"
+    ]
   },
 ];

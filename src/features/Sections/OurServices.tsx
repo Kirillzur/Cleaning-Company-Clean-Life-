@@ -22,6 +22,7 @@ const OurServices = () => {
                   icon={service.icon}
                   title={service.title}
                   buttonText={service.buttonText}
+                  readMoreLabel={service.readMoreLabel}
                   className={
                       index === services.length - 1
                       ? 'md:col-span-2 md:justify-self-center md:max-w-none md:w-[704px] md:h-[340px] max-md:w-full max-md:max-w-[330px] 2xl:w-[950px] 2xl:h-auto 2xl:max-w-none'
