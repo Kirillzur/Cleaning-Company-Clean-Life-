@@ -1,4 +1,5 @@
 import geminiLogo from "../../Media/Icons/Gemini_CompanyLogo.svg";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   const socialLinks = [
@@ -120,28 +121,28 @@ const Footer = () => {
         <div className="flex flex-col gap-4 md:hidden">
           <div className="flex items-center justify-between">
             <div className="flex items-center gap-2">
-              <a className="" href="/">
+              <Link className="" to="/">
                 <img
                   src={geminiLogo}
                   alt="Gemini logo"
                   width={38}
                   height={38}
                 />
-              </a>
+              </Link>
               <span className="font-secondary text-lg font-bold">
                 CleanLife
               </span>
             </div>
             <div className="flex items-center gap-3">
               {socialLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   aria-label={link.label}
                   className="flex h-9 w-9 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:border-white hover:bg-white/10"
                 >
                   {link.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>
@@ -151,14 +152,14 @@ const Footer = () => {
         <div className="hidden md:grid md:grid-cols-4 md:gap-8 lg:gap-14">
           <div className="space-y-4">
             <div className="flex items-center gap-2">
-              <a className="" href="/">
+              <Link className="" to="/">
                 <img
                   src={geminiLogo}
                   alt="Gemini logo"
                   width={38}
                   height={38}
                 />
-              </a>
+              </Link>
               <span className="font-secondary text-xl font-bold">
                 CleanLife
               </span>
@@ -169,42 +170,42 @@ const Footer = () => {
           <div className="space-y-3">
             <p className="font-semibold">Yritys</p>
             <div className="flex flex-col gap-2 text-sm text-white/80">
-              <a
-                href="#palvelumme"
+              <Link
+                to="#price-calculator"
                 className="transition-colors hover:text-white"
               >
-                Palvelumme
-              </a>
-              <a
-                href="#hinnasto"
+                Hinnasto
+              </Link>
+              <Link
+                to="#contacts"
                 className="transition-colors hover:text-white"
               >
                 Ota yhteyttä
-              </a>
+              </Link>
             </div>
           </div>
 
           <div className="space-y-3">
             <p className="font-semibold">Palvelut</p>
             <div className="flex flex-col gap-2 text-sm text-white/80">
-              <a
-                href="#palvelumme"
+              <Link
+                to="/Kotisiivous"
                 className="transition-colors hover:text-white"
               >
                 Kotisiivous
-              </a>
-              <a
-                href="#palvelumme"
+              </Link>
+              <Link
+                to="/Toimistosiivous"
                 className="transition-colors hover:text-white"
               >
                 Toimistosiivous
-              </a>
-              <a
-                href="#palvelumme"
+              </Link>
+              <Link
+                to="/Muuttosiivous"
                 className="transition-colors hover:text-white"
               >
                 Muuttosiivous
-              </a>
+              </Link>
             </div>
           </div>
 
@@ -212,14 +213,14 @@ const Footer = () => {
             <p className="font-semibold">Seuraa Meitä</p>
             <div className="flex items-center gap-3">
               {socialLinks.map((link) => (
-                <a
+                <Link
                   key={link.label}
-                  href={link.href}
+                  to={link.href}
                   aria-label={link.label}
                   className="flex h-10 w-10 items-center justify-center rounded-full border border-white/40 text-white transition-colors hover:border-white hover:bg-white/10"
                 >
                   {link.icon}
-                </a>
+                </Link>
               ))}
             </div>
           </div>

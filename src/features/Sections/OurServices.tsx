@@ -8,7 +8,7 @@ import { services } from '../../data/services'
 const OurServices = () => {
   return (
     <>
-    <div className='mt-13 md:mt-33'>
+    <div id='services' className='mt-13 md:mt-33'>
         <div className='text-center'>
             <h3 className='text-primary font-bold uppercase text-[14px] tracking-widest mb-1.5'>Mitä Teemme</h3>
             <h2 className='text-primary font-bold text-4xl'>Palvelumme</h2>
@@ -22,7 +22,7 @@ const OurServices = () => {
                   icon={service.icon}
                   title={service.title}
                   buttonText={service.buttonText}
-                  readMoreLabel={service.readMoreLabel}
+                  pageLabel={service.pageLabel}
                   className={
                       index === services.length - 1
                       ? 'md:col-span-2 md:justify-self-center md:max-w-none md:w-[704px] md:h-[340px] max-md:w-full max-md:max-w-[330px] 2xl:w-[950px] 2xl:h-auto 2xl:max-w-none'

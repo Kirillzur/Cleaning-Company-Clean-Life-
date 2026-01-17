@@ -1,6 +1,7 @@
 import { useState } from "react";
 import NavButton from "../UI/NavButton";
 import geminiLogo from "../../Media/Icons/Gemini_CompanyLogo.svg";
+import { Link } from "react-router-dom";
 
 const Navbar = () => {
   const [sideMenu, setSideMenu] = useState(false);
@@ -19,9 +20,9 @@ const Navbar = () => {
       <div className=" md:border-secondary max-w-[1440px] mx-auto">
         <div className="flex justify-between py-3 px-1.5">
           <div className="flex gap-2  items-center">
-            <a className="" href="/">
+            <Link className="" to="/">
               <img src={geminiLogo} alt="Gemini logo" width={38} height={38} />
-            </a>
+            </Link>
             <p className="font-bold text-primary text-xl font-secondary">
               CleanLife
             </p>
@@ -29,10 +30,10 @@ const Navbar = () => {
 
           <div className="gap-8 items-center md:flex hidden">
             <div className="items-center font-semibold text-primary    hover:text-[#015a50] transition-colors">
-              <a href="#">Palvelumme</a>
+              <Link to="/#services">Palvelumme</Link>
             </div>
             <div className="items-center font-semibold text-primary   hover:text-[#015a50] transition-colors">
-              <a href="#">Hinnasto</a>
+              <Link to="/#price-calculator">Hinnasto</Link>
             </div>
           </div>
 
@@ -103,27 +104,27 @@ const Navbar = () => {
           </button>
         </div>
         <nav className="flex flex-col gap-4 py-5 px-2.5">
-          <a
-            href="#palvelumme"
+          <Link
+            to="/#services"
             className="text-lg font-semibold text-text hover:text-light_gray transition-colors"
             onClick={closeSidebar}
           >
             Palvelumme
-          </a>
-          <a
-            href="#hinnasto"
+          </Link>
+          <Link
+            to="/#price-calculator"
             className="text-lg font-semibold text-text hover:text-light_gray transition-colors"
             onClick={closeSidebar}
           >
             Hinnasto
-          </a>
-          <a
-            href="#hinnasto"
+          </Link>
+          <Link
+            to="/#contacts"
             className="text-lg font-semibold text-primary hover:text-light_gray transition-colors"
             onClick={closeSidebar}
           >
             Ota Yhteyttä
-          </a>
+          </Link>
         </nav>
       </aside>
     </>

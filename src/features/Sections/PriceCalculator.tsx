@@ -45,7 +45,7 @@ const CalculateLeft = () => {
   }, [selectedService, frequencyOptions]);
 
   return (
-    <div className="flex flex-col gap-4 mt-13 md:mt-33 lg:flex-row lg:items-start lg:gap-6 justify-center">
+    <div id="price-calculator" className="scroll-mt-13 flex flex-col gap-4 mt-13 md:mt-33 lg:flex-row lg:items-start lg:gap-6 justify-center">
       <div className="rounded-2xl bg-background_secondary p-3 sm600:p-8 md:pt-10 md:p-10 lg:h-[525px] lg:w-[675px] lg:p-[41px]">
         <div className="grid grid-cols-2 grid-rows-[auto_1fr] justify-end gap-x-2 gap-y-2 sm600:gap-x-5 sm600:gap-y-3 md:gap-x-10 md:gap-y-5">
           <div className="md:col-span-2 md:col-start-1 md:row-start-1">

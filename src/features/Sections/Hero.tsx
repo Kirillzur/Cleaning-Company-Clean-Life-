@@ -14,7 +14,7 @@ const Hero = () => {
         <div className=' min-[1028px]:flex min-[1028px]:items-end min-[1028px]:justify-between min-[1028px]:gap-8 min-[1028px]:mb-12'>
           <div className='max-w-lg'>
           <h1 className="text-4xl sm:text-5xl font-bold text-primary">Siivouspalvelut Pääkaupunki seudulla koteihin ja yrityksille</h1>
-          <p className="mt-5.5 text-[#1b1b1b] text-xl max-w-[485px]">Tarjoamme laadukasta ja huolellista siivousta Helsingissä, Vantaalla sekä Espoossa koteihin ja yrityksille.</p>
+          <p className="mt-5.5 text-[#3b3b3b] text-xl max-w-[485px]">Tarjoamme laadukasta ja huolellista siivousta Helsingissä, Vantaalla sekä Espoossa koteihin ja yrityksille.</p>
           </div>
           <div className='hidden min-[1028px]:flex min-[1028px]:flex-row min-[1028px]:items-end min-[1028px]:gap-3'>
             <CalculatePriceButton label="Laske hinta" />

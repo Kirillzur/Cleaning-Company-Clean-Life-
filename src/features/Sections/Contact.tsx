@@ -4,8 +4,8 @@ import Yhteystiedot from '../../Components/UI/Yhteystiedot'
 const Contact = () => {
   return (
     <section
-      id="yhteystiedot"
-      className="relative -mb-1.5 md:-mb-5 mt-13 md:mt-33 bg-background_secondary shadow-[0_0_0_100vmax_#FCFCF5] [clip-path:inset(0_-100vmax)]"
+      id="contacts"
+      className="-scroll-m-15 relative -mb-1.5 md:-mb-5 mt-13 md:mt-33 bg-background_secondary shadow-[0_0_0_100vmax_#FCFCF5] [clip-path:inset(0_-100vmax)]"
     >
       <div className="mx-auto max-w-[1480px] px-4 py-14 sm:px-6 md:px-8 lg:px-10 md:py-18">
         <div className="text-center">

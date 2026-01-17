@@ -1,10 +1,14 @@
 import Footer from "./Footer";
 import Navbar from "./Navbar";
 import { Outlet } from "react-router-dom";
+import ScrollToTop from "./ScrollToTop";
+import ScrollToHash from "./ScrollToHash";
 
 const Layout = () => {
   return (
     <div>
+      <ScrollToTop />
+      <ScrollToHash />
       <div className="md:px-3.5 md:border-b md:border-secondary ">
         <Navbar />
       </div>
