@@ -10,12 +10,16 @@ import muuttoSiivousPcImage from '../Media/images/MuuttoSiivousPc.webp'
 import kotisiivousIcon from '../Media/Icons/KotiSiivous.svg'
 import toimistoSiivousIcon from '../Media/Icons/ToimistoSiivous.svg'
 import muuttoSiivousIcon from '../Media/Icons/MuuttoSiivous.svg'
+import muuttosiivous500px from '../Media/images/MuuttoSiivous500px.webp'
+import kotisiivous500px from '../Media/images/KotiSiivous500px.webp'
+import toimistosiivous500px from '../Media/images/ToimistoSiivous500px.webp'
 
 
 export type serviceId = "Kotisiivous" | "ToimistoSiivous" | "MuuttoSiivous";
 
 export interface ResponsiveImages {
   mobile: string;
+  middle: string;
   tablet: string;
   desktop: string;
 }
@@ -35,6 +39,7 @@ export const services: Service[] = [
     id: "Kotisiivous",
     image: {
       mobile: kotisiivousImage,
+      middle: kotisiivous500px,
       tablet: kotisiivousTabletImage,
       desktop: kotisiivousPcImage,
     },
@@ -47,6 +52,7 @@ export const services: Service[] = [
     id: "ToimistoSiivous",
     image: {
       mobile: toimistoSiivousImage,
+      middle: toimistosiivous500px,
       tablet: toimistoSiivousTabletImage,
       desktop: toimistoSiivousPcImage,
     },
@@ -59,6 +65,7 @@ export const services: Service[] = [
     id: "MuuttoSiivous",
     image: {
       mobile: muuttoSiivousImage,
+      middle: muuttosiivous500px,
       tablet: muuttoSiivousTabletImage,
       desktop: muuttoSiivousPcImage,
     },

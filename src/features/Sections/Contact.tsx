@@ -16,8 +16,7 @@ const Contact = () => {
             Ota Yhteyttä Meihin
           </h2>
           <p className="mt-3 text-base text-light_gray sm:text-lg">
-            Onko sinulla kysyttävää? Haluatko varata siivouksen? Lähetä meille
-            viesti tai soita!
+            Onko sinulla kysyttävää? Haluatko varata siivouksen? Ota meihin yhteyttä.
           </p>
         </div>
         <div className="mt-10 flex flex-col items-center gap-8 min-[1028px]:flex-row min-[1028px]:items-start min-[1028px]:justify-center">

@@ -27,10 +27,11 @@ const ServiceCard = ({
  
 
   return (
-    <div className={`relative w-full max-w-[340px] ${className ?? ''}`.trim()}>
+    <div className={`relative w-full ${className ?? ''}`.trim()}>
       <picture>
         <source media="(min-width: 1480px)" srcSet={image.desktop} />
         <source media="(min-width: 768px)" srcSet={image.tablet} />
+        <source media="(min-width: 540px)" srcSet={image.middle} />
         <img  src={image.mobile} alt={title} />
       </picture>
       <div className="absolute inset-0 flex flex-col items-center justify-end gap-3 pb-4">

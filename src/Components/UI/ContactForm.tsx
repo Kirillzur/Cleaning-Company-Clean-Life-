@@ -1,13 +1,25 @@
-import type { FormEvent } from 'react'
+import { useEffect, useRef, useState } from "react";
+import { useForm, ValidationError } from "@formspree/react";
 
 const ContactForm = () => {
-  const handleSubmit = (event: FormEvent<HTMLFormElement>) => {
-    event.preventDefault()
-  }
+  const [state, handleSubmit] = useForm("mojjerkw");
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [showThanks, setShowThanks] = useState(false);
+
+  useEffect(() => {
+    if (!state.succeeded) {
+      return;
+    }
+
+    formRef.current?.reset();
+    setShowThanks(true);
+  }, [state.succeeded]);
 
   return (
     <form
+      ref={formRef}
       onSubmit={handleSubmit}
+      method="POST"
       className="w-full max-w-[560px] rounded-4xl bg-white p-6 shadow-[0_24px_50px_-30px_rgba(15,23,42,0.45)] sm:p-8 md:p-10"
     >
       <div className="grid gap-5 md:grid-cols-2">
@@ -28,6 +40,7 @@ const ContactForm = () => {
             placeholder="matti@esimerkki.fi"
             className="mt-2 w-full rounded-full border border-secondary bg-secondary/70 px-4 py-2.5 text-sm text-text placeholder:text-light_gray focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/20"
           />
+          <ValidationError prefix="email" field="email" errors={state.errors} />
         </label>
         <label className="text-sm font-semibold text-primary md:col-span-2">
           Puhelinnumero
@@ -37,6 +50,7 @@ const ContactForm = () => {
             placeholder="+358 40 123 4567"
             className="mt-2 w-full rounded-full border border-secondary bg-secondary/70 px-4 py-2.5 text-sm text-text placeholder:text-light_gray focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/20"
           />
+          <ValidationError prefix="phone" field="phone" errors={state.errors} />
         </label>
         <label className="text-sm font-semibold text-primary md:col-span-2">
           Viesti
@@ -47,6 +61,7 @@ const ContactForm = () => {
             placeholder="Kerro meille, miten voimme auttaa..."
             className="mt-2 w-full resize-none rounded-2xl border border-secondary bg-secondary/70 px-4 py-3 text-sm text-text placeholder:text-light_gray focus:border-primary/40 focus:outline-none focus:ring-2 focus:ring-primary/20"
           />
+          <ValidationError prefix="message" field="message" errors={state.errors} />
         </label>
       </div>
       <button
@@ -78,8 +93,17 @@ const ContactForm = () => {
         </svg>
         Lähetä Viesti
       </button>
+      {showThanks && (
+        <div
+          className="mt-4 rounded-2xl border border-primary/20 bg-primary/10 px-4 py-3 text-sm font-semibold text-primary"
+          role="status"
+          aria-live="polite"
+        >
+          Kiitos viestistäsi. Me otamme teihin pian yhteyttä!
+        </div>
+      )}
     </form>
-  )
-}
+  );
+};
 
-export default ContactForm
+export default ContactForm;

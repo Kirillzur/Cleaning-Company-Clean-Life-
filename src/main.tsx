@@ -6,7 +6,7 @@ import Home from './features/Pages/Home.tsx'
 import './index.css'
 import Kotisiivous from './features/Pages/Kotisiivous.tsx'
 import Muuttosiivous from './features/Pages/Muuttosiivous.tsx'
-import Toimistosiivous from './features/Pages/ToimistoSiivous.tsx'
+import Toimistosiivous from './features/Pages/Toimistosiivous.tsx'
 
 
 const router = createBrowserRouter([

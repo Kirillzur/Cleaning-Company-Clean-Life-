@@ -5,7 +5,7 @@ import { services } from '../../data/services'
 
 
 
-const OurServices = () => {
+const OurServices = () => { 
   return (
     <>
     <div id='services' className='mt-13 md:mt-33'>
@@ -25,8 +25,8 @@ const OurServices = () => {
                   pageLabel={service.pageLabel}
                   className={
                       index === services.length - 1
-                      ? 'md:col-span-2 md:justify-self-center md:max-w-none md:w-[704px] md:h-[340px] max-md:w-full max-md:max-w-[330px] 2xl:w-[950px] 2xl:h-auto 2xl:max-w-none'
-                      : 'md:w-[340px] md:h-[330px] max-md:w-full max-md:max-w-[330px]  2xl:w-[466px] 2xl:h-auto 2xl:max-w-none'
+                      ? 'md:col-span-2 md:justify-self-center md:max-w-none md:w-[704px] md:h-[340px] max-md:w-full  2xl:w-[950px] 2xl:h-auto 2xl:max-w-none'
+                      : 'md:w-[340px] md:h-[330px] max-md:w-full   2xl:w-[466px] 2xl:h-auto 2xl:max-w-none'
                   }
                   buttonClassName={index === services.length - 1 ? 'md:px-73 2xl:px-90' : ''}
                 />
