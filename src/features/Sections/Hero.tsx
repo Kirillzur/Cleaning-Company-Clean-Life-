@@ -1,8 +1,11 @@
 import BookHeroButton from '../../Components/UI/BookHeroButton';
 import CalculatePriceButton from '../../Components/UI/CalculatePriceButton';
 import heroMobile from '../../Media/images/Hero-section-mobile.webp';
+import heroMobile2x from '../../Media/images/Hero-section-mobile-2x.webp';
 import heroTablet from '../../Media/images/Hero-section-768px.webp';
+import heroTablet2x from '../../Media/images/Hero-section-768px-2x.webp';
 import heroPc from '../../Media/images/Hero-Section-1028px.webp';
+import heroPc2x from '../../Media/images/Hero-Section-1028px-2x.webp';
 
 
 
@@ -25,9 +28,14 @@ const Hero = () => {
           <div className='flex justify-center min-[680px]:justify-start md:justify-center min-[1028px]:justify-start'>
             <div className='relative inline-flex rounded-[48px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] overflow-hidden w-fit min-[1028px]:w-full'>
               <picture className='relative z-0'>
-                <source media="(min-width: 1028px)" srcSet={heroPc} />
-                <source media="(min-width: 600px)" srcSet={heroTablet} />
-                <img className='rounded-[48px] w-full h-auto' src={heroMobile} alt="Hero Image" />
+                <source media="(min-width: 1028px)" srcSet={`${heroPc} 1x, ${heroPc2x} 2x`} />
+                <source media="(min-width: 600px)" srcSet={`${heroTablet} 1x, ${heroTablet2x} 2x`} />
+                <img
+                  className='rounded-[48px] w-full h-auto'
+                  src={heroMobile}
+                  srcSet={`${heroMobile} 1x, ${heroMobile2x} 2x`}
+                  alt="Hero Image"
+                />
               </picture>
             </div>
           </div>

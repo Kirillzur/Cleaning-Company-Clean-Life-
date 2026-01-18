@@ -28,11 +28,25 @@ const ServiceCard = ({
 
   return (
     <div className={`relative w-full ${className ?? ''}`.trim()}>
-      <picture>
-        <source media="(min-width: 1480px)" srcSet={image.desktop} />
-        <source media="(min-width: 768px)" srcSet={image.tablet} />
-        <source media="(min-width: 540px)" srcSet={image.middle} />
-        <img  src={image.mobile} alt={title} />
+      <picture className="block  h-full w-full">
+        <source
+          media="(min-width: 1480px)"
+          srcSet={`${image.desktop} 1x, ${image.desktop2x} 2x`}
+        />
+        <source
+          media="(min-width: 768px)"
+          srcSet={`${image.tablet} 1x, ${image.tablet2x} 2x`}
+        />
+        <source
+          media="(min-width: 540px)"
+          srcSet={`${image.middle} 1x, ${image.middle2x} 2x`}
+        />
+        <img
+          className="block h-full w-full object-cover"
+          src={image.mobile}
+          srcSet={`${image.mobile} 1x, ${image.mobile2x} 2x`}
+          alt={title}
+        />
       </picture>
       <div className="absolute inset-0 flex flex-col items-center justify-end gap-3 pb-4">
         <div className="self-start ml-8">
