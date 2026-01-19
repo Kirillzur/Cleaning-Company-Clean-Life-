@@ -9,7 +9,6 @@ export default defineConfig({
     react(),
     tailwindcss(),
   ],
-  base: "/Cleaning-Company-Clean-Life-/",
   resolve: {
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
