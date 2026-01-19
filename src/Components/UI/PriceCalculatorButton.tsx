@@ -153,7 +153,6 @@ const PriceCalculatorButton = ({
               />
               <button
                 type="submit"
-                onClick={() => {console.log(selectedRooms, selectedFrequency, selectedService )}}
                 className="cursor-pointer mt-2 rounded-xl bg-primary px-4 py-2 text-sm font-bold text-white hover:bg-[#026b5f]"
               >
                 Varaa siivous

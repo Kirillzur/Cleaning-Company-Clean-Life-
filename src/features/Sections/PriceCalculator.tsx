@@ -16,12 +16,9 @@ import {
 import type { serviceId } from "@/data/services";
 
 const CalculateLeft = () => {
-  const [selectedService, setSelectedService] = useState<serviceId | null>(
-    null,
-  );
+  const [selectedService, setSelectedService] = useState<serviceId | null>(null);
   const [selectedRooms, setSelectedRooms] = useState<RoomValue | null>(null);
-  const [selectedFrequency, setSelectedFrequency] =
-    useState<CleaningFrequency | null>(null);
+  const [selectedFrequency, setSelectedFrequency] = useState<CleaningFrequency | null>(null);
 
   const frequencyOptions = getFrequencyOptions(selectedService);
   const total = calculatePrice(
