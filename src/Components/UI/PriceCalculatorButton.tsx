@@ -1,16 +1,39 @@
-import React from "react";
+import type { CleaningFrequency, RoomValue } from "@/data/pricing";
+import type { serviceId } from "@/data/services";
+import { useForm } from "@formspree/react";
+import React, { useEffect, useRef, useState } from "react";
 
 interface PriceCalculatorButtonProps {
   label: string;
   className?: string;
-  type?: "button" | "submit" | "reset";
+  type?: "submit";
+  selectedService: serviceId | null;
+  selectedRooms: RoomValue | null;
+  selectedFrequency: CleaningFrequency | null;
+  total: number | null;
 }
 
 const PriceCalculatorButton = ({
   label,
-  type = "button",
+  type,
+  selectedService,
+  selectedRooms,
+  selectedFrequency,
+  total,
 }: PriceCalculatorButtonProps) => {
   const [openpopop, setOpenpopop] = React.useState(false);
+  const [state, handleSubmit] = useForm("mojjerkw");
+  const formRef = useRef<HTMLFormElement | null>(null);
+  const [showThanks, setShowThanks] = useState(false);
+
+  useEffect(() => {
+    if (!state.succeeded) {
+      return;
+    }
+
+    formRef.current?.reset();
+    setShowThanks(true);
+  }, [state.succeeded]);
 
   const openform = () => {
     setOpenpopop(true);
@@ -53,26 +76,35 @@ const PriceCalculatorButton = ({
                   Jätä meille yhteystietosi, niin otamme sinuun pian yhteyttä!
                 </p>
               </div>
-              <button type="button" className="cursor-pointer hover:rounded-3xl py-1 hover:bg-gray-200" onClick={closeform} aria-label="Close">
-                 <svg
-              width="34"
-              height="24"
-              viewBox="0 0 20 20"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                d="M15 5L5 15M5 5L15 15"
-                stroke="#0E101A"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              />
-            </svg>
+              <button
+                type="button"
+                className="cursor-pointer hover:rounded-3xl py-1 hover:bg-gray-200"
+                onClick={closeform}
+                aria-label="Close"
+              >
+                <svg
+                  width="34"
+                  height="24"
+                  viewBox="0 0 20 20"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M15 5L5 15M5 5L15 15"
+                    stroke="#0E101A"
+                    strokeWidth="2"
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                  />
+                </svg>
               </button>
             </div>
 
-            <form className="mt-4 grid gap-3">
+            <form
+              ref={formRef}
+              onSubmit={handleSubmit}
+              className="mt-4 grid gap-3"
+            >
               <input
                 className="text-black w-full rounded-xl border border-stroke px-4 py-2 text-sm"
                 placeholder="Koko nimi"
@@ -99,12 +131,42 @@ const PriceCalculatorButton = ({
                 name="message"
                 rows={4}
               />
+              <input
+                type="hidden"
+                name="Total"
+                value={String(total ?? "")}
+              />
+              <input
+                type="hidden"
+                name="Cleaning-Type"
+                value={selectedService ?? ""}
+              />
+              <input
+                type="hidden"
+                name="Rooms"
+                value={selectedRooms ?? ""}
+              />
+              <input
+                type="hidden"
+                name="How often cleaning"
+                value={selectedFrequency ?? ""}
+              />
               <button
                 type="submit"
+                onClick={() => {console.log(selectedRooms, selectedFrequency, selectedService )}}
                 className="cursor-pointer mt-2 rounded-xl bg-primary px-4 py-2 text-sm font-bold text-white hover:bg-[#026b5f]"
               >
                 Varaa siivous
               </button>
+              {showThanks && (
+                <div
+                  className="mt-4 rounded-2xl border border-primary/20 bg-primary/10 px-4 py-3 text-sm font-semibold text-primary"
+                  role="status"
+                  aria-live="polite"
+                >
+                  Kiitos viestistäsi. Me otamme teihin pian yhteyttä!
+                </div>
+              )}
             </form>
           </div>
         </div>
