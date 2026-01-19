@@ -1,8 +1,11 @@
 import BookHeroButton from '../../Components/UI/BookHeroButton';
 import CalculatePriceButton from '../../Components/UI/CalculatePriceButton';
 import heroMobile from '../../Media/images/Hero-section-mobile.webp';
+import heroMobile2x from '../../Media/images/Hero-section-mobile-2x.webp';
 import heroTablet from '../../Media/images/Hero-section-768px.webp';
+import heroTablet2x from '../../Media/images/Hero-section-768px-2x.webp';
 import heroPc from '../../Media/images/Hero-Section-1028px.webp';
+import heroPc2x from '../../Media/images/Hero-Section-1028px-2x.webp';
 
 
 
@@ -11,10 +14,10 @@ const Hero = () => {
   return (
     <>
     <div>
-        <div className='min-[1028px]:flex min-[1028px]:items-end min-[1028px]:justify-between min-[1028px]:gap-8 min-[1028px]:mb-12'>
+        <div className=' min-[1028px]:flex min-[1028px]:items-end min-[1028px]:justify-between min-[1028px]:gap-8 min-[1028px]:mb-12'>
           <div className='max-w-lg'>
-          <h1 className="text-6xl sm:text-7xl font-bold text-primary">Koe Luonnon Raikkaus</h1>
-          <p className="mt-3.5 text-xl max-w-[485px]">Ammattitaitoinen ja ekologinen siivous, joka muuttaa kotisi rauhan tyyssijaksi. Tuomme kiillon takaisin kotiisi.</p>
+          <h1 className="text-4xl sm:text-5xl font-bold text-primary">Siivouspalvelut Pääkaupunki seudulla koteihin ja yrityksille</h1>
+          <p className="mt-5.5 text-[#3b3b3b] text-xl max-w-[485px]">Tarjoamme laadukasta ja huolellista siivousta Helsingissä, Vantaalla sekä Espoossa koteihin ja yrityksille.</p>
           </div>
           <div className='hidden min-[1028px]:flex min-[1028px]:flex-row min-[1028px]:items-end min-[1028px]:gap-3'>
             <CalculatePriceButton label="Laske hinta" />
@@ -25,9 +28,14 @@ const Hero = () => {
           <div className='flex justify-center min-[680px]:justify-start md:justify-center min-[1028px]:justify-start'>
             <div className='relative inline-flex rounded-[48px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] overflow-hidden w-fit min-[1028px]:w-full'>
               <picture className='relative z-0'>
-                <source media="(min-width: 1028px)" srcSet={heroPc} />
-                <source media="(min-width: 600px)" srcSet={heroTablet} />
-                <img className='rounded-[48px] w-full h-auto' src={heroMobile} alt="Hero Image" />
+                <source media="(min-width: 1028px)" srcSet={`${heroPc} 1x, ${heroPc2x} 2x`} />
+                <source media="(min-width: 600px)" srcSet={`${heroTablet} 1x, ${heroTablet2x} 2x`} />
+                <img
+                  className='rounded-[48px] w-full h-auto'
+                  src={heroMobile}
+                  srcSet={`${heroMobile} 1x, ${heroMobile2x} 2x`}
+                  alt="Hero Image"
+                />
               </picture>
             </div>
           </div>

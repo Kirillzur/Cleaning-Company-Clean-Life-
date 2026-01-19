@@ -1,18 +1,26 @@
-import type { MouseEventHandler } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 interface ReadMoreButtonProps {
   label: string
-  onClick?: MouseEventHandler<HTMLButtonElement>
   className?: string
+  pageLabel?: string;
 }
 
-const ReadMoreButton = ({ label, onClick, className }: ReadMoreButtonProps) => {
+
+
+const ReadMoreButton = ({ label, className, pageLabel }: ReadMoreButtonProps) => {
+  const navigate = useNavigate(); 
+
+  const handleClick = () => {
+    navigate(pageLabel || '/');
+  }
+
   return (
     <button
       className={`bg-secondary cursor-pointer text-primary font-bold px-20 py-2 rounded-full hover:bg-background_secondary transition-colors duration-300 md:px-25 2xl:px-35 ${className ?? ''}`.trim()}
-      onClick={onClick}
+      onClick={handleClick}
     >
-      <a href="#">{label}</a>
+      {label}
     </button>
   )
 }

@@ -5,16 +5,16 @@ import { services } from '../../data/services'
 
 
 
-const OurServices = () => {
+const OurServices = () => { 
   return (
     <>
-    <div className='mt-13 md:mt-33'>
+    <div id='services' className='mt-13 md:mt-33'>
         <div className='text-center'>
             <h3 className='text-primary font-bold uppercase text-[14px] tracking-widest mb-1.5'>Mitä Teemme</h3>
             <h2 className='text-primary font-bold text-4xl'>Palvelumme</h2>
         </div>
           <div className="mt-8 flex flex-col items-center xl:flex-row xl:items-start xl:justify-center">
-            <div className="grid grid-cols-1 gap-3 justify-items-center md:grid-cols-2 md:max-w-[704px] xl:mr-12 2xl:mr-7 2xl:max-w-[950px] 2xl:gap-[13px]">
+            <div className="grid grid-cols-1 gap-3 sm:gap-5 md:gap-3 justify-items-center md:grid-cols-2 md:w-full md:max-w-[704px] xl:mr-12 2xl:mr-7 2xl:max-w-[950px] 2xl:gap-[13px]">
               {services.map((service, index) => (
                 <ServiceCard
                   key={service.id}
@@ -22,10 +22,11 @@ const OurServices = () => {
                   icon={service.icon}
                   title={service.title}
                   buttonText={service.buttonText}
+                  pageLabel={service.pageLabel}
                   className={
                       index === services.length - 1
-                      ? 'md:col-span-2 md:justify-self-center md:max-w-none md:w-[704px] md:h-[340px] max-md:w-full max-md:max-w-[330px] 2xl:w-[950px] 2xl:h-auto 2xl:max-w-none'
-                      : 'md:w-[340px] md:h-[330px] max-md:w-full max-md:max-w-[330px]  2xl:w-[466px] 2xl:h-auto 2xl:max-w-none'
+                      ? 'md:col-span-2 md:justify-self-stretch  2xl:w-full 2xl:h-auto 2xl:max-w-none'
+                      : 'md:w-[340px]  max-md:w-full 2xl:w-[466px] 2xl:h-auto 2xl:max-w-none'
                   }
                   buttonClassName={index === services.length - 1 ? 'md:px-73 2xl:px-90' : ''}
                 />

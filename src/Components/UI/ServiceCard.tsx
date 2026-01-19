@@ -1,4 +1,4 @@
-import type { MouseEventHandler } from 'react'
+import {  type MouseEventHandler } from 'react'
 import type { ResponsiveImages } from '../../data/services'
 import ReadMoreButton from './ReadMoreButton'
 
@@ -9,7 +9,9 @@ interface ServiceCardProps {
   buttonText: string
   onReadMore?: MouseEventHandler<HTMLButtonElement>
   className?: string
-  buttonClassName?: string
+  readMoreLabel?: string[];
+  buttonClassName?: string;
+  pageLabel?: string;
 }
 
 const ServiceCard = ({
@@ -17,16 +19,34 @@ const ServiceCard = ({
   icon,
   title,
   buttonText,
-  onReadMore,
   className,
   buttonClassName,
+  pageLabel
 }: ServiceCardProps) => {
+
+ 
+
   return (
-    <div className={`relative w-full max-w-[340px] ${className ?? ''}`.trim()}>
-      <picture>
-        <source media="(min-width: 1480px)" srcSet={image.desktop} />
-        <source media="(min-width: 768px)" srcSet={image.tablet} />
-        <img className="w-full h-auto min-[600px]:w-[330px] md:h-full md:w-full" src={image.mobile} alt={title} />
+    <div className={`relative w-full ${className ?? ''}`.trim()}>
+      <picture className="block  h-full w-full">
+        <source
+          media="(min-width: 1480px)"
+          srcSet={`${image.desktop} 1x, ${image.desktop2x} 2x`}
+        />
+        <source
+          media="(min-width: 768px)"
+          srcSet={`${image.tablet} 1x, ${image.tablet2x} 2x`}
+        />
+        <source
+          media="(min-width: 540px)"
+          srcSet={`${image.middle} 1x, ${image.middle2x} 2x`}
+        />
+        <img
+          className="block h-full w-full object-cover"
+          src={image.mobile}
+          srcSet={`${image.mobile} 1x, ${image.mobile2x} 2x`}
+          alt={title}
+        />
       </picture>
       <div className="absolute inset-0 flex flex-col items-center justify-end gap-3 pb-4">
         <div className="self-start ml-8">
@@ -34,7 +54,7 @@ const ServiceCard = ({
         </div>
         <h3 className="text-[24px] font-bold text-white">{title}</h3>
         <div className="mb-4 ">
-          <ReadMoreButton label={buttonText} onClick={onReadMore} className={buttonClassName} />
+          <ReadMoreButton pageLabel={pageLabel} label={buttonText} className={buttonClassName} />
         </div>
       </div>
     </div>
