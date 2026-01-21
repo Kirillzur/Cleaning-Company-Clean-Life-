@@ -17,7 +17,7 @@ const Navbar = () => {
   return (
     <>
       {/* Top bar */}
-      <div className=" md:border-secondary max-w-[1440px] mx-auto">
+      <div className=" md:border-secondary max-w-360 mx-auto">
         <div className="flex justify-between py-3 px-1.5">
           <div className="flex gap-2  items-center">
             <Link className="" to="/">
@@ -68,12 +68,12 @@ const Navbar = () => {
       {/* Sidebar */}
       {sideMenu && (
         <div
-          className="fixed inset-0 bg-black/30 z-40 md:hidden"
+          className="fixed inset-0  bg-black/30 z-40 md:hidden"
           onClick={closeSidebar}
         />
       )}
       <aside
-        className={`fixed top-0 right-0 h-full w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 md:hidden ${
+        className={`fixed top-0 rounded-l-xl right-0 h-full w-64 bg-white shadow-xl z-50 transform transition-transform duration-300 md:hidden ${
           sideMenu ? "translate-x-0" : "translate-x-full"
         }`}
         aria-hidden={!sideMenu}

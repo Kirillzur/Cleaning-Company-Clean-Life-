@@ -48,7 +48,7 @@ const PriceCalculatorButton = ({
       <button
         onClick={openform}
         type={type}
-        className="cursor-pointer w-full max-w-[420px] rounded-[14px] bg-secondary px-6 py-3 text-[16px] font-bold text-primary shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),_0_8px_10px_-6px_rgba(0,0,0,0.10)] transition-colors hover:bg-[#f2f2f2] font-secondary"
+        className="cursor-pointer w-full max-w-105 rounded-[14px] bg-secondary px-6 py-3 text-[16px] font-bold text-primary shadow-[0_20px_25px_-5px_rgba(0,0,0,0.10),_0_8px_10px_-6px_rgba(0,0,0,0.10)] transition-colors hover:bg-[#f2f2f2] font-secondary"
       >
         {label}
       </button>
@@ -61,7 +61,7 @@ const PriceCalculatorButton = ({
           onClick={closeform}
         >
           <div
-            className="w-full max-w-[560px] rounded-2xl bg-white p-6 shadow-lg"
+            className="w-full max-w-140 rounded-2xl bg-white p-6 shadow-lg"
             onClick={(event) => event.stopPropagation()}
           >
             <div className="flex items-start justify-between gap-4">
